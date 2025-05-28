@@ -1,0 +1,1649 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Risk Analysis Modeler - Risk Analysis Modeler</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#onboarding-new-gcp-users-model-developers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Risk Analysis Modeler" class="md-header__button md-logo" aria-label="Risk Analysis Modeler" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Risk Analysis Modeler
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Risk Analysis Modeler
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Risk Analysis Modeler" class="md-nav__button md-logo" aria-label="Risk Analysis Modeler" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Risk Analysis Modeler
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Risk Analysis Modeler
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Risk Analysis Modeler
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-the-right-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting the Right Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-python-and-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Python and Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing Python and Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-git-using-the-mytechnology-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Install Git Using the myTechnology Website
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-set-up-basic-git-bash-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Set up Basic Git Bash Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-bitbucket-sso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Up Bitbucket SSO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-the-right-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting the Right Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-python-and-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Python and Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing Python and Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-git-using-the-mytechnology-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Install Git Using the myTechnology Website
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-set-up-basic-git-bash-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Set up Basic Git Bash Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-bitbucket-sso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Up Bitbucket SSO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!-- This filename: onboarding_new_gcp_users.md ->
+<!-- Remember to test these: &nbsp; (non-breaking space = 1 space width)
+      &ensp; (en space)
+      &emsp; (em space)-->
+
+<h1 id="onboarding-new-gcp-users-model-developers">Onboarding New GCP Users — Model Developers</h1>
+<p><br></p>
+<h2 id="introduction">Introduction</h2>
+<p>GCP is our bank's Global Risk Management toolkit, designed to speed up Python development. This includes the simplification of querying any database that business supports across the banking division and investment division. Throughout this document, <strong>development</strong> and <strong>developers</strong> refer to the team that has designed and maintains this product, and makes it available to other "customer" departments. <strong>Model developers</strong> are the Python programmers or developers that will be using this documentation to get started and to create customized risk analysis solutions for their teams.</p>
+<p>This document explains how a workflow is created, defines the most important classes and nodes, and provides exercises that will help you set up your environment. Each exercise builds on the previous one — and each iteration expands the complexity of your challenges.</p>
+<p><br></p>
+<h2 id="setting-up">Setting Up</h2>
+<p>The following instructions concisely summarize how to set up your environment.</p>
+<p>If you are new to our bank, you may find these instructions too brief. Consult your department's Confluence and Wiki documentation for business process constraints or procedures that are unique to your department. This section covers:</p>
+<ol>
+<li><a href="#getting-the-right-software">Getting the right software</a></li>
+<li><a href="#installing-python-and-git">Installing Python and Git</a></li>
+<li><a href="#getting-the-right-permissions">Getting the right permissions</a></li>
+<li><a href="#setting-up-a-development-environment-on-your-pc-artifactory">Setting up a development environment on your PC</a></li>
+</ol>
+<h3 id="getting-the-right-software">Getting the Right Software</h3>
+<p>Installing <strong>Python</strong>, <strong>PyCharm</strong>, and <strong>Git</strong> (includes <strong>Git Bash</strong>) is a straightforward process. <strong>Visit the myTechnology website and request each of these tools.</strong> After about half a day, you will receive an automated email notifying you that the PAM system has delivered these applications to your desktop. Launch them to confirm they have been installed properly. If you have any issues running them, submit an L1 ticket via the ServiceNow portal link provided in your department's "Welcome Packet: Onboarding Guide."</p>
+<p>To install <strong>PyCharm Community Edition</strong>, visit <a href="https://mytechnology.bankofoz.com/dwp/app/#/itemprofile/98765">myTechnology</a>.</p>
+<p>When requesting PyCharm or any other tools mentioned in this document, select the most recent, free version.<br />
+Refer to the <a href="#installing-python-and-git">next section</a>, which primarily focuses on adding a security key into BitBucket.</p>
+<blockquote>
+<p><strong>Important:</strong> You will not be able to pull repositories from the GCP Bitbucket project without proper security key setup.</p>
+</blockquote>
+<h3 id="installing-python-and-git">Installing Python and Git</h3>
+<p>To install <strong>Python</strong> (current recommended version is 3.9), go to <a href="https://www.python.org/downloads/release/python-3920/">Python x64 3.9.20</a> and click <strong>Request Now</strong>.<br />
+If your department blocks this operation, submit a ticket via <a href="https://mytechnology.bankofoz.com/dwp/app/#/itemprofile/98701">myTechnology python-3920</a>.<br />
+For <strong>EA Request ID</strong>, select <em>Not Required</em> from the pull-down menu.<br />
+When done, click <strong>Submit request</strong>. You will be notified via email when it has been installed to your endpoint (laptop, device, or virtual machine).</p>
+<p>To install <strong>Git</strong>, there are a few additional steps because Git must pass BitBucket security, requiring the <code>.gitconfig</code> file to be set up. Specifically, you need to:</p>
+<ol>
+<li><a href="#1-install-git-using-the-mytechnology-website">Install Git using the myTechnology website</a></li>
+<li><a href="#2-set-up-basic-git-bash-properties">Set up basic Git Bash properties</a></li>
+<li><a href="#3-set-up-bitbucket-sso">Set up BitBucket SSO</a></li>
+</ol>
+<p>Each will be explained below.</p>
+<h4 id="1-install-git-using-the-mytechnology-website">1. Install Git Using the myTechnology Website</h4>
+<ol>
+<li>Go to the <a href="https://mytechnology.bankofoz.com/">myTechnology website</a> and search for <em>Git</em>.</li>
+<li>Click the <strong>Request Now</strong> button next to the latest version (Example: <strong>Git 2.46.1</strong>).</li>
+<li>Fill out the required request information and click <strong>Submit request</strong>.</li>
+<li>Wait for an email informing you that Git has been successfully installed on your device.</li>
+</ol>
+<h4 id="2-set-up-basic-git-bash-properties">2. Set up Basic Git Bash Properties</h4>
+<p>After you are notified that Git has been installed, follow these steps:</p>
+<ol>
+<li>Click <strong>Start</strong> and search for <strong>Git</strong>.</li>
+<li>When the <strong>Git Bash</strong> icon appears, right-click and select <strong>Pin to Start</strong>.</li>
+<li>Launch <strong>Git Bash</strong>.</li>
+<li>To open your <code>.gitconfig</code> file for editing, run the following command:
+   <code>bash
+   git config --global --edit</code></li>
+<li>
+<p>In vscode or a text editor, e.g., vi, or Notepad++, update your e-mail and name. Make sure that this email address is the one being used by BitBucket, because this becomes important for the next section. <strong>Example:</strong></p>
+<p><code>python
+[user]
+    name = Doe, Jon
+    email = jon.doe@bofoz.com</code></p>
+<blockquote>
+<p><strong>Tip:</strong> If a <code>.gitconfig</code> file does not exist, Git Bash will automatically create it when you run the edit command.</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="set-up-bitbucket-sso">Set Up Bitbucket SSO</h4>
+<p>In this step, you will set up an <em>ed25519 key</em> and integrate it with your Bitbucket account. <strong>ED25519</strong> is equivalent to <strong>RSA-3072</strong> in that it provides 128-bit security, and it is commonly used in PGP and TLS. It is practical even for IoT solutions because it is fast and efficient on low-powered devices.</p>
+<p>To set up Bitbucket:</p>
+<ol>
+<li>
+<p>Check for an existing SSH key by entering the following command in your Git Bash root.</p>
+<p><strong>The directory found when the Git Bash session is invoked:</strong>
+```bash</p>
+<h1 id="the-public-ssh-key-used-by-bitbucket-is-found-in-id_ed25519pub">The public SSH key used by Bitbucket is found in id_ed25519.pub</h1>
+<h1 id="if-you-have-this-file-you-have-already-completed-this-section-on-preparing-python-and-git">If you have this file, you have already completed this section on preparing Python and Git</h1>
+<p>ls -al ~/.ssh</p>
+<h1 id="if-you-receive-the-error-ls-cannot-access-cssh-no-such-file-or-directory">If you receive the error: ‘ls: cannot access /c/.ssh: No such file or directory’</h1>
+<h1 id="you-can-resolve-it-by-creating-an-ssh-directory-in-your-home-directory">You can resolve it by creating an .ssh directory in your home directory.</h1>
+<h1 id="it-should-path-to-cusersssh">It should path to C:/Users/<your Standard ID>/.ssh</h1>
+<p>mkdir ${HOME}/.ssh
+```</p>
+<p><strong>Screenshot: Output result</strong></p>
+<p><img alt="The result of running ls -al ~/.ssh is displayed" src="../screenshots/setup_ed25519_01.png" /></p>
+<blockquote>
+<p><strong>Tip:</strong> If you already have <code>id_ed25519</code> and <code>id_ed25519.pub</code> but wish to generate a new key, delete these files and continue to the next step to create a new SSH key. If you believe Bitbucket is already set up and wish to test it, jump to <a href="#step-7">Step 7</a> of this section.</p>
+</blockquote>
+<p>If you cannot run the <code>ls</code> command, make sure it exists and is pathed correctly.<br />
+<strong>Troubleshooting Examples:</strong>
+```bash</p>
+<h1 id="returns-the-lsexe-path-typically-found-in-usrbin-or-program-filesgitusrbin">Returns the ls.exe path (typically found in /usr/bin/ or /Program Files/git/usr/bin/):</h1>
+<p>which ls</p>
+<h1 id="provides-multiple-locations-including-binary-source-and-manual-pages">Provides multiple locations, including binary, source, and manual pages:</h1>
+<p>whereis ls</p>
+<h1 id="to-test-if-it-is-in-a-valid-path">To test if it is in a valid path:</h1>
+<p>echo $PATH
+```</p>
+</li>
+<li>
+<p>Generate a new SSH key by creating <code>id_ed25519</code> and <code>id_ed25519.pub</code> with <code>git config</code>. In <strong>Git Bash</strong>, run the following commands, replacing the placeholder values with your actual name and email. <strong>Do not enter a passphrase.</strong></p>
+<p><strong>Example:</strong>
+```python
+git config --global user.name "Last, First"
+git config --global user.email your_email@BofOz.com</p>
+<h1 id="generate-a-new-ssh-key">Generate a new SSH key</h1>
+<p>ssh-keygen -t ed25519 -C your_email@BofOz.com</p>
+<h1 id="when-prompted-to-enter-a-file-name-for-saving-your-new-key-press-to-accept-the-default-location">When prompted to enter a file name for saving your new key, press <Enter> to accept the default location.</h1>
+<h1 id="do-not-enter-a-passphrase">Do NOT enter a passphrase.</h1>
+<p>```</p>
+</li>
+<li>
+<p>Retrieve and verify your SSH key. To get the content of the <code>id_ed25519.pub</code> file, use the <code>cat</code> and <code>clip</code> commands in <strong>Git Bash</strong> (you will need this soon for Bitbucket).</p>
+<p><strong>Examples:</strong>
+```bat</p>
+<h1 id="displays-the-ssh-public-key-you-will-copy">Displays the SSH public key you will copy:</h1>
+<p>cat ~/.ssh/id_ed25519.pub</p>
+<h1 id="copies-your-ssh-key-directly-to-the-clipboard-for-bitbucket-setup">Copies your SSH key directly to the clipboard for Bitbucket setup:</h1>
+<p>clip &lt; ~/.ssh/id_ed25519.pub</p>
+<h1 id="sample-output-that-is-getting-copied-and-will-soon-be-pasted-into-bitbucket">SAMPLE OUTPUT that is getting copied — and will soon be pasted into Bitbucket:</h1>
+<h1 id="ssh-ed25519-aaaad5tazc1lzdi1ntresant5aaihyb5nopbdr4vrrivfjfj9ljubavrij3kaof-jondoebofozcom">ssh-ed25519 AAAAD5TazC1lZDI1NTRESANT5AAIHYB5noPbdR4VrRivFjfJ9LjubavRIJ3KAof jon.doe@BofOz.com</h1>
+<h1 id="ms-dos-cmd-alternative-windows-command-prompt">MS-DOS CMD alternative (Windows Command Prompt):</h1>
+<p>cd %userprofile%/.ssh
+clip &lt; id_ed25519.pub</p>
+<h1 id="macos-terminal-zsh-alternative">MacOS Terminal (zsh) alternative:</h1>
+<h1 id="pbcopy-sshid_ed25519pub">pbcopy &lt; ~/.ssh/id_ed25519.pub</h1>
+<p>```</p>
+</li>
+<li>
+<p>Log into your Bitbucket account.<br />
+    After entering <a href="https://scm.horizon.bankofoz.com/projects">Bitbucket</a>, click on your <strong>Profile</strong> (top right) and select <strong>Manage account</strong>.</p>
+<p><strong>Screenshot:</strong> Finding Bitbucket's <strong>Manage Account</strong> settings<br />
+<img alt="Invoking Bitbucket's Manage Account settings" src="../screenshots/setup_bitbucket_ssh_02.png" /></p>
+</li>
+<li>
+<p>Paste the contents of your <code>id_ed25519.pub</code> file into Bitbucket:</p>
+<ul>
+<li>Select <strong>SSH keys</strong> from the left menu.</li>
+<li>Click <strong>Add key</strong>.</li>
+<li>Paste your unique SSH key into the <strong>Key</strong> text field.</li>
+<li>Optionally, enter a label in the <strong>Key label</strong> field for traceability.</li>
+<li>Click <strong>Save</strong> to complete your Bitbucket setup.</li>
+</ul>
+</li>
+<li>
+<p>After saving, you can view your SSH key:</p>
+<ul>
+<li>Go to <strong>Profile &gt; Manage account &gt; SSH keys</strong>.</li>
+</ul>
+<p><strong>Screenshot:</strong> Viewing all Bitbucket keys<br />
+<img alt="Viewing all Bitbucket keys" src="../screenshots/setup_bitbucket_ssh_03_view_keys.png" /></p>
+</li>
+<li>
+<p>Test your SSH connection to Bitbucket.</p>
+<ul>
+<li>Open <strong>Git Bash</strong> or your terminal.</li>
+<li>Run the following command to verify that your SSH key is correctly configured:
+<code>python
+ssh -T git@scm.horizon.bankofoz.com</code></li>
+<li>If the connection is successful, you will see a welcome message indicating successful authentication.</li>
+<li>If you receive a permission error, review your SSH key setup before continuing.</li>
+</ul>
+<blockquote>
+<p><strong>Tip:</strong> Testing your SSH connection early saves time troubleshooting later.</p>
+</blockquote>
+</li>
+<li>
+<p>Confirm that your key works by cloning a test repository.</p>
+<ul>
+<li>Click on <strong>Projects</strong> in the main Bitbucket ribbon.</li>
+<li>In <strong>Search (Filter projects by name)</strong>, enter <em>GRA</em>.</li>
+<li>In the filter results, click on <strong>GRA Core Platform</strong>.</li>
+<li>In <strong>Search (Filter repositories by name)</strong>, enter <em>play</em>.</li>
+<li>In the filter results, click on <strong>playground</strong>.</li>
+<li>In Bitbucket’s left-panel ribbon, click <strong>Clone</strong> and copy the code.</li>
+</ul>
+<p><strong>Screenshot:</strong> The Bitbucket <strong>Clone</strong> Button<br />
+<img alt="Bitbucket Clone button gives you Code for Git Bash" src="../screenshots/setup_bitbucket_ssh_04_confirm_clone.png" /></p>
+<ul>
+<li>In the dialog box that appears, click the <strong>Click to copy</strong> button.</li>
+<li>In <strong>Git Bash</strong>, <strong>PowerShell</strong>, or <strong>Command Prompt (cmd)</strong>, navigate to the directory where you want to clone the repository, then run the <code>git clone</code> command using the copied text.</li>
+</ul>
+<p><strong>Example:</strong>
+```python
+git clone ssh://git@scm.horizon.bankofoz.com/gcp/playground.git</p>
+<h1 id="if-the-following-results-are-returned-your-bitbucket-setup-is-correct">If the following results are returned, your Bitbucket setup is correct:</h1>
+<p>Cloning into 'playground'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 1 (delta 0), pack-reused 0
+Receiving objects: 100% (4/4), done.</p>
+<h1 id="when-done-you-can-delete-the-playground-folder-you-just-cloned">When done, you can DELETE the playground folder you just cloned.</h1>
+<h1 id="you-will-not-be-using-it-right-now">You will not be using it right now.</h1>
+<p>```</p>
+</li>
+<li>
+<p>If you were not able to complete the above steps successfully, see <a href="#getting-the-right-permissions">Getting the Right Permissions</a> to resolve any authorization issues.</p>
+</li>
+</ol>
+<h3 id="getting-the-right-permissions">Getting the Right Permissions</h3>
+<p>To access GCP repositories, GCP packages, and relevant databases, you will need permissions granted through ARM. This section briefly describes the processes for requesting permissions as a Model Developer, specifically related to GCP tools.</p>
+<h3 id="setting-up-a-development-environment-on-your-pc">Setting Up a Development Environment on Your PC</h3>
+<p>This section focuses on setting up Artifactory access and creating your virtual environment (venv).</p>
+<p>Referencing an external packaging repository (such as pip’s default 'simple' index at https://pypi.org/simple/) is not permitted by most banking and financial institutions. Therefore, before you can establish a local Python learning environment or sandbox, your pip configuration must be registered with Artifactory to access an internal index.</p>
+<p>Once you complete this setup, you can create your Python virtual environment (venv). You will then be able to activate your tools in this virtual environment and interact with GCP, as you <a href="#writing-gcp-workflows">write your own workflows</a>.</p>
+<p>Steps covered in this section:</p>
+<ol>
+<li><a href="#1-log-in-to-ozs-artifactory">Log in to Oz's Artifactory</a></li>
+<li><a href="#2-choose-location-and-prepare-pipini-file">Choose Location and Prepare pip.ini File</a></li>
+<li><a href="#3-generate-python-packager-key-update-pipini-and-activate-venv">Generate Python Packager Key, Update pip.ini, and Activate venv</a></li>
+<li><a href="#4-troubleshooting-tips-for-this-section">Troubleshooting Tips for this Section</a></li>
+</ol>
+<h4 id="1-log-in-to-ozs-artifactory">1. Log in to Oz's Artifactory</h4>
+<p>Bank of Oz uses a JFrog Artifactory instance to internally store and maintain resources needed by developers. To complete this section, log in to the <a href="https://artifacts.horizon.bankofoz.com">JFrog intranet site</a> using your <em>Standard ID credentials</em>.</p>
+<blockquote>
+<p><strong>Tip:</strong> If this is your first time using Artifactory as a Bank of Oz employee, you may be prompted to enter your password into the <strong>Current Password</strong> field and click <strong>Unlock</strong>.</p>
+</blockquote>
+<p>Keep this tab open in your browser, because you will return to it in Step 3.</p>
+<h4 id="2-choose-location-and-prepare-pipini-file">2. Choose Location and Prepare pip.ini File</h4>
+<p>Determine where you would like to place the <code>pip.ini</code> file you will be building.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python"># From Bash, the pip command displays all the locations it checks for an initialization file
+pip config -v list
+
+# -------------------------- Sample Output -------------------------
+# For variant 'global', will try loading 'C:\ProgramData\pip\pip.ini'
+# For variant 'user', will try loading 'C:\Users\zkmtbsx\pip\pip.ini'
+# For variant 'user', will try loading 'C:\Users\zkmtbsx\AppData\Roaming\pip\pip.ini'
+# For variant 'site', will try loading 'C:\dev\gcp_py_samples\venv\pip.ini'
+</code></pre>
+<p>In one of these folders, create a <code>pip.ini</code> file, e.g., <code>C:\ProgramData\pip\pip.ini</code>, and paste the following content into your new <code>.ini</code> text file:</p>
+<pre><code class="language-ini">[global]
+
+cert = /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+index-url = https://$USER:$API_KEY@artifacts.horizon.bankofoz.com/artifactory/api/pypi/virtual-pypi/simple
+trusted-host = artifacts.horizon.bankofoz.com   pypi-python.org
+
+extra-index-url = http://$USER:$API_KEY@artifacts.horizon.bankofoz.com/artifactory/api/pypi/libs-snapshot-local-pypi/simple
+
+[search]
+index = https://$USER:$API_KEY@artifacts.horizon.bankofoz.com  pypi.python.org
+
+[list]
+format = columns
+
+[distutils]
+index-servers = local
+
+[local]
+repository = https://$USER:$API_KEY@artifacts.horizon.bankofoz.com/artifactory/api/pypi/libs-snapshots-local-pypi
+</code></pre>
+<p>Finally, replace each <code>$USER</code> with your <code>&lt;Standard ID&gt;</code> (e.g., <em>zyxwvut</em>) and save the <code>pip.ini</code> file.</p>
+<blockquote>
+<p><strong>Important:</strong> You must replace "$USER" in <strong>four places</strong>, and your <code>&lt;Standard ID&gt;</code> must be entered in <strong>lowercase</strong> form.</p>
+</blockquote>
+<h4 id="3-generate-python-packager-key-update-pipini-and-activate-venv">3. Generate Python Packager Key, Update <code>pip.ini</code>, and Activate <code>venv</code></h4>
+<p>When working with GCP for the first time, it is best to complete these twelve (12) steps in one sitting — from start to finish.</p>
+<blockquote>
+<p><strong>Tip:</strong> Once your GCP environment is prepared, you may need to refer back to these steps from time to time. Whenever you start a new GCP project, revisit Step 11 and review the project package’s README file.</p>
+</blockquote>
+<p>With your <code>pip.ini</code> still open:</p>
+<ol>
+<li>Return to your <strong>Artifactory tab</strong>.</li>
+<li>Log in with your Standard ID credentials.</li>
+<li>In the <strong>User Profile</strong> screen, enter your Standard ID password under <strong>To edit your user profile, please enter your password</strong>.</li>
+<li>Click <strong>Unlock</strong>.</li>
+<li>Click <strong>Generate an Identity Token</strong>.</li>
+<li>In the <strong>Generate an Identity Token</strong> dialog box, provide a meaningful description in the <strong>Add Description</strong> field (e.g., a purpose and today’s date).</li>
+<li>Click <strong>Next</strong>.</li>
+<li>Copy your generated <strong>Reference Token</strong> by clicking on the <strong>Copy 'Generated token' to clipboard</strong> button.</li>
+<li>Return to your <code>pip.ini</code> file and replace each instance of <code>$API_KEY</code> with your unique token (four places).</li>
+<li>Save and close your <code>pip.ini</code> file.</li>
+<li>Run the following commands to create your virtual environment and test setup:</li>
+</ol>
+<pre><code class="language-python"># Bash commands to install Python packages
+# Assumes you have created the following location:
+# /c/gcp_sandbox/modelproject01/
+
+cd /c/gcp_sandbox/modelproject01/
+mkdir -p venvs
+cd venvs
+python -m venv venv
+cd venv/Scripts
+source ./activate
+python -m pip install --upgrade pip
+python -m pip install scipy
+</code></pre>
+<blockquote>
+<p><strong>Tip:</strong> If the <code>source</code> and <code>python</code> commands run without error, your Artifactory setup was successful.</p>
+</blockquote>
+<p><strong>Additional Identity Token Characteristics</strong> 
+- If you make a mistake, you cannot reuse the same token; however, you can generate a new token by repeating steps 5 through 8.
+- Tokens cannot be deleted, so it is important to name them in a meaningful way.
+- Tokens expire after one year.</p>
+<h4 id="4-troubleshooting-tips-for-this-section">4. Troubleshooting Tips for this Section</h4>
+<p>If you have run <code>source ./activate</code> and later closed your terminal session, your session has been deactivated. You will need to reactivate it before continuing.</p>
+<p>Other common <code>pip.ini</code> issues:
+- You accidentally copied incorrect information from Artifactory to <code>pip.ini</code>.
+- An incorrect <code>pip.ini</code> file is being used or the one you built is not in the correct path. Run the following to verify:
+  <code>bash
+  echo $(realpath "pip.ini")</code>
+  Then review the <a href="#3-generate-python-packager-key-update-pipini-and-activate-venv">previous instructions</a>.
+- Your Standard ID was incorrectly entered into <code>pip.ini</code> (it must be in lowercase).
+- You forgot to replace all four instances of <code>$API_KEY</code> with your generated token.</p>
+<p><br></p>
+<h2 id="writing-gcp-workflows">Writing GCP Workflows</h2>
+<p>It is vital to understand that GCP is built for workflows designed to process large quantities of data. Be patient with the exercises that present the anatomy of a GCP workflow — they are intentionally designed to ensure that no node in a workflow is busy collecting data unnecessarily.</p>
+<p>To illustrate this, consider that most real-world projects will typically fall into one of these GCP kernel data-processing scenarios:
+- Node not executed previously, external data required, and node is available
+- Node not executed previously, external data required, but dataset not registered
+- Node has previously been executed</p>
+<p>For more about nodes, see the <a href="#node">Nodes section</a> in the API.</p>
+<p>If you want to run GCP and create a basic workflow, you do not need to deep dive into nodes or syntax yet (this can come later). Follow the instructions below to get started. If you encounter an impossible impasse, you can email <a href="mailto:dg.gcp_support@BankofOz.com">GCP support</a>.</p>
+<h3 id="how-to-create-your-first-gcp-workflow">How to Create Your First GCP Workflow</h3>
+<p>This section walks you through:
+- Downloading a repository
+- Configuring your Python virtual environment with the correct tools and libraries
+- Executing a simple workflow to add two variables (a+b)
+- Exiting the virtual environment gracefully so that you do not accidentally leave it open when switching to a different project with unique requirements</p>
+<p>To run your first workflow successfully, complete the following high-level steps:</p>
+<ol>
+<li><a href="#1-prepare-gcp-and-install-test-environment">Prepare GCP and Install Test Environment</a></li>
+<li><a href="#2-install-gcp-library-by-installing-the-gcp-pip-package">Install GCP library by installing the GCP pip package</a></li>
+<li><a href="#3-write-workflow">Write workflow</a></li>
+<li><a href="#4-test-workflow">Test workflow</a></li>
+</ol>
+<h4 id="1-prepare-gcp-and-install-test-environment">1. Prepare GCP and Install Test Environment</h4>
+<p>You should have already installed the recommended Python version that includes Spark integration. See <a href="#installing-python-and-git">Installing Python and Git</a> if needed.</p>
+<p>Since you will be running GCP in a virtual environment (venv), you are not actually installing GCP. Instead, you will copy a folder from the GRA GCP repository that contains workflow examples. The final steps of this section will focus on setting up your <code>venv</code>.</p>
+<blockquote>
+<p><strong>Important:</strong> If you have not set up your SSH key to secure data traveling to and from Bitbucket repositories, complete <a href="#3-set-up-bitbucket-sso">Set up Bitbucket SSO</a> first.</p>
+</blockquote>
+<p>To prepare your GCP repository:</p>
+<ol>
+<li>Open <code>bash</code> or a similar Unix shell and create a folder for GCP.</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-bash">~/c/gcp_sandbox/modelproject01/
+</code></pre>
+<blockquote>
+<p><strong>Important:</strong> For faster performance, run your projects from the <code>C:</code> drive rather than the <code>H:</code> drive, especially when working in a virtual environment.</p>
+</blockquote>
+<ol>
+<li>Select your preferred repository with sample workflows in Bitbucket’s GCP project directory <a href="https://scm.intranet.bankofoz.com/projects/GCP">here</a>.</li>
+</ol>
+<blockquote>
+<p><strong>Troubleshoot:</strong> If you cannot see the GCP repos, or if you receive an <em>HTTPS port 443 error</em>, you may lack Bitbucket access. See <a href="#getting-the-right-permissions">Getting the Right Permissions</a>.</p>
+</blockquote>
+<ol>
+<li>With the repository selected (<strong>gcp_py_samples</strong>), click the <strong>Clone</strong> button on the left panel and copy the clone command.</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-python">ssh://git@scm.horizon.bankofoz.com/gcp/gcp_py_samples.git
+</code></pre>
+<p><strong>Screenshot:</strong> Clone <strong>gcp_py_samples</strong> for A+B Workflow<br />
+<img alt="Picking up code to clone gcp_py_samples repo" src="../screenshots/setup_bitbucket_gcp_py_samples_05_clone.png" /></p>
+<ol>
+<li>Return to your shell (<code>bash</code>) and run the <code>git clone</code> command with the copied SSH string. Then enter that folder.</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-python">cd /c/gcp_sandbox/modelproject01/
+git clone ssh://git@scm.horizon.bankofoz.com/gcp/gcp_py_samples.git
+</code></pre>
+<ol>
+<li>Display the directory’s contents and confirm cloning. Then <code>cd</code> into the local copy of the repo.</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-python"># Enter the directory and list contents
+cd gcp_py_samples
+ls
+</code></pre>
+<p>If needed, you can locate a cloned repo with:</p>
+<pre><code class="language-python">find /c/gcp_sandbox/ -type d -name gcp_py_samples -print
+</code></pre>
+<blockquote>
+<p><strong>Tip:</strong> It is a good idea to complete this section before moving on. For each session, activate your virtual environment before using it, or create a launch batch file to automate this. If it is already activated and you activate it again, it will not drain additional resources.</p>
+</blockquote>
+<ol>
+<li>Now that you are in the cloned repository folder, instantiate your virtual environment (venv). This should take approximately 15 seconds.</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-python"># Create your venv
+python -m venv venv
+
+# *Reminder:* 
+# The first &quot;venv&quot; is the Python module that creates virtual environments. 
+# The second &quot;venv&quot; is the directory it creates to house your isolated environment.
+</code></pre>
+<blockquote>
+<p><strong>Tip:</strong> Naming your virtual environment <code>venv</code> simplifies detection by tools like PyCharm. However, you may name it something else if needed (e.g., <code>gcp_py_samples_venv</code>).</p>
+</blockquote>
+<ol>
+<li>Activate the newly created virtual environment.</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-python"># For Linux or macOS syntax:
+source venv/Scripts/activate
+
+# For Windows CMD:
+venv\Scripts\activate
+</code></pre>
+<blockquote>
+<p><strong>Benefit:</strong> After activation, any <code>pip install</code> commands will install packages inside this virtual environment. This allows easy environment control without affecting system-wide Python installations.</p>
+</blockquote>
+<h4 id="2-install-gcp-library-by-installing-the-gcp-pip-package">2. Install GCP Library by Installing the GCP pip Package</h4>
+<ol>
+<li>Install the preliminary GCP package and dependencies.</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-python"># Install GCP dependencies
+pip install --no-deps -e .
+</code></pre>
+<p>If the command does not work, explicitly call Artifactory:</p>
+<p>Example:</p>
+<pre><code class="language-python">pip install --no-deps -e . --extra-index-url https://&lt;StandardID&gt;:*****@artifacts.horizon.bankofoz.com/artifactory/api/pypi/virtual-pypi/simple
+</code></pre>
+<ol>
+<li>Install the specific libraries for this repository.</li>
+</ol>
+<p>In this repository, you are installing:
+- <code>gcp</code>, <code>matplotlib</code>, and <code>radon</code> from the <code>requirements.txt</code> file
+- <code>pytest</code> from the <code>build_requirements.txt</code> file</p>
+<p>Example:</p>
+<pre><code class="language-python"># Install main libraries
+pip install -r requirements.txt
+
+# Install testing framework
+pip install -r build_requirements.txt
+</code></pre>
+<blockquote>
+<p><strong>Reference:</strong> For background on how <code>venv</code> environments are created and updated, see the official <a href="https://docs.python.org/3/tutorial/venv.html">Python venv tutorial</a>.</p>
+</blockquote>
+<ol>
+<li>If the above installations were successful, you are ready to proceed to the next section: <a href="#3-write-workflow">Write Workflow</a>.</li>
+</ol>
+<p>However, it is important to deactivate your virtual environment before switching to another project that uses a different repository.</p>
+<p>You can deactivate your environment by running:</p>
+<p>Example:</p>
+<pre><code class="language-python"># Exit the current venv
+deactivate
+</code></pre>
+<blockquote>
+<p><strong>Troubleshooting:</strong> If you were unsuccessful in this section, confirm that your <code>pip.ini</code> (or <code>pip.cfg</code>) file is correct, and that your path points properly to <code>/c/gcp_sandbox/modelproject01/</code>.</p>
+</blockquote>
+<h5 id="know-when-to-deactivate-your-virtual-python-environment">Know When to Deactivate Your Virtual Python Environment</h5>
+<ul>
+<li>When you need to switch to another virtual environment (for a different project)</li>
+<li>When you complete a project</li>
+<li>Before running system-wide Python commands (e.g., installing a global package)</li>
+<li>When opening a new shell session (because venvs do not persist across terminal sessions)</li>
+</ul>
+<h4 id="3-write-workflow">3. Write Workflow</h4>
+<p>Now it is time to write the first GCP workflow (<code>hello_world</code>), comprising two nodes:</p>
+<ul>
+<li><strong>name</strong>: This element is defined as an axis of type <code>Str</code>. Axis values (coordinates) can be specified by a user during execution (at runtime). They can also be set by other nodes (detailed in a forthcoming walkthrough <strong>TK</strong>).</li>
+<li><strong>message</strong>: This element is defined as a function (Fn). GCP function nodes accept any Python function (e.g., <code>say_hello</code>) and a mapping of outputs of another node to this function’s inputs. In this graph, the <code>say_hello</code> function’s input parameter <code>user_name</code> is being set to the value of the <code>name</code> node.</li>
+</ul>
+<p>To prepare your first GCP Python script:</p>
+<ol>
+<li>
+<p>Launch VS Code or any text editor that can be used for coding or scripting.</p>
+</li>
+<li>
+<p>From the GCP module, <strong>import the required functions or classes</strong>:</p>
+</li>
+</ol>
+<pre><code class="language-python">from gcp_kernel.api.task_definition import gcp_task
+from gcp_kernel.api.workflow_definition import Workflow, Axis, Fn
+</code></pre>
+<ol>
+<li>Using f-string syntax, which concisely and efficiently manipulates strings in Python, create the greeting.<br />
+It is important to use <code>@gcp_task</code>, a decorator, to define the greeting function:</li>
+</ol>
+<pre><code class="language-python">@gcp_task
+def say_hello(user_name: str) -&gt; str:
+    return f'Hello {user_name}'
+</code></pre>
+<blockquote>
+<p><strong>Important:</strong> All functions called directly from a GCP workflow must use either the <code>@gcp_task</code> or <code>@gcp_spark</code> decorators. These decorators modify or extend the behavior of functions without changing their actual code.</p>
+</blockquote>
+<ol>
+<li>Construct your GCP workflow.<br />
+A GCP workflow is a set of GCP nodes chained together:</li>
+</ol>
+<pre><code class="language-python">greeter = Workflow(
+    workflow_name=&quot;Greeter&quot;,
+    description=&quot;Workflow that creates a greeting&quot;,
+    graph={
+        'name': Axis(str),
+        'message': Fn(say_hello, {'user_name': 'name'})
+    }
+)
+</code></pre>
+<blockquote>
+<p><strong>Python concept:</strong> A graph is a Python data structure that consists of nodes and edges. The edges connect nodes and can be either bidirectional or directed (where one node specifically depends on another).</p>
+</blockquote>
+<ol>
+<li>Save your file:</li>
+</ol>
+<pre><code class="language-python">../gcp_py_samples/hello_world_01.py
+</code></pre>
+<ol>
+<li>Copy your new file to the <code>src</code> folder:</li>
+</ol>
+<pre><code class="language-bash">cp hello_world_01.py /c/gcp_sandbox/modelproject01/gcp_py_samples/src/gcp_py_samples/workflows
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> It is best practice to copy the file instead of moving it. This way, your copy remains easily discoverable by any GCP program or script looking for your workflow.</p>
+</blockquote>
+<p>Now that your file <code>hello_world_01.py</code> is saved into both your <code>gcp_py_samples</code> and <code>src</code> folders, you are ready to test it for errors and run it in the next section.</p>
+<p>A brief explanation of some key elements in your workflow will also be reviewed during testing, using <code>pytest.ini</code>.</p>
+<h4 id="4-test-workflow">4. Test Workflow</h4>
+<p>You will run the <code>hello_world_01.py</code> workflow by sending it values and testing parameters using a file that you will edit called <code>test_hello_world_01.py</code>.</p>
+<p>Normally, before releasing a GCP workflow, model developers test it with <code>pytest.ini</code>.<br />
+<em>This not only runs your workflow, but also identifies dozens of potential problems with your code, data binding, or delays.</em></p>
+<p><strong>Diagram:</strong><br />
+<img alt="Picking up code to clone gcp_py_samples repo" src="../diagrams/plant_uml_exercise_hello_world_01.png" /><br />
+<strong>hello_world_01.py ladder diagram</strong> summarizes how the files work together when you execute <code>pytest.ini</code> at runtime.</p>
+<p>To proceed:</p>
+<ol>
+<li>
+<p>In the <em>tests/integration</em> folder, make a copy of <code>test_demo.py</code> and rename it to <code>test_hello_world_01.py</code>.</p>
+</li>
+<li>
+<p>Open <code>test_hello_world_01.py</code> in VS Code or a text editor.</p>
+</li>
+<li>
+<p>Specify the correct file and workflow name (<code>greeter</code>) by editing <strong>line 2</strong>:</p>
+</li>
+</ol>
+<pre><code class="language-python"># Change:
+# from gcp_py_samples.workflows.demo import demo_wf
+
+# Update to:
+from gcp_py_samples.workflows.hello_world_01 import greeter
+</code></pre>
+<ol>
+<li>Update the node name and coordinates by editing <strong>lines 6 and 7</strong>:</li>
+</ol>
+<pre><code class="language-python"># Change:
+# node = 'FN2'
+# coords = ('AX1', 100)
+
+# Update to:
+node = 'message'
+coords = {'name': 'John Doe'}
+</code></pre>
+<ol>
+<li>Update the <code>ExecRequests</code> constructor with the correct <code>workflow_fqn</code> and <code>version</code> by editing <strong>lines 10 and 11</strong>:</li>
+</ol>
+<pre><code class="language-python"># Change:
+# workflow_fqn=demo_wf.fqn,
+# version=demo_wf.version,
+
+# Update to:
+workflow_fqn=greeter.fqn,
+version=greeter.version,
+</code></pre>
+<ol>
+<li>Specify the function that your test will be evaluating by updating the <code>assert</code> statement:</li>
+</ol>
+<pre><code class="language-python"># Change:
+# assert results.get('FN2') == '200 Hello'
+
+# Update to:
+assert results.get('message') == '200 Hello'
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong><br />
+<code>assert</code> is how tests pass or fail in <code>pytest</code>:<br />
+- If the assertion fails, <code>pytest</code> marks the test as failed and shows a diff between expected and actual values.<br />
+- If the assertion passes, the test continues or ends successfully (see Step 9 for more).</p>
+</blockquote>
+<ol>
+<li>After completing the edits, save the document to the <em>integration</em> folder:</li>
+</ol>
+<pre><code class="language-python">/c/gcp_sandbox/modelproject01/gcp_py_samples/tests/integration/test_hello_world_01.py
+</code></pre>
+<ol>
+<li>Run the file you just saved and review the response to familiarize yourself with the feedback provided by the tests.</li>
+</ol>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python">C:\dev\gcp_py_samples\tests\integration&gt; pytest test_hello_world_01.py
+</code></pre>
+<ol>
+<li>To complete this exercise, change your <code>assert</code> argument to match the correct expected value and rerun <code>pytest</code>.</li>
+</ol>
+<p><strong>Example:</strong></p>
+<pre><code class="language-python"># Change:
+# assert results.get('message') == '200 Hello'
+
+# Update to:
+assert results.get('message') == 'Hello John Doe'
+</code></pre>
+<p>In the next section, you will run a similar workflow called <code>hello_world_02.py</code>. These instructions will be more concise and will introduce new nodes to add two numbers.</p>
+<p><br></p>
+<h2 id="understanding-the-gcp-workflow">Understanding the GCP Workflow</h2>
+<p>In this section you will:</p>
+<ul>
+<li><a href="#1-how-to-create-a-workflow-adding-two-numbers">Create a workflow that adds two numbers</a></li>
+<li><a href="#key-workflow-configuration-parameters">Review key workflow configuration parameters</a></li>
+<li><a href="#2-experiment-with-assert-for-better-test-scripting">Test several cases with a single test script</a></li>
+<li><a href="#3-concise-summary-first-two-workflows">Concisely summarize the first two workflows</a></li>
+<li><a href="#4-learn-how-to-utilize-gcp-tasks">Learn how to utilize GCP tasks to re-use and repurpose functions</a></li>
+<li><a href="#5-summary-workflows-and-tasks">Summarize how workflows and tasks work together</a></li>
+</ul>
+<h3 id="1-how-to-create-a-workflow-adding-two-numbers">1. How to Create a Workflow Adding Two Numbers</h3>
+<p>In this section, your objective is to create a GCP workflow that takes two input values (<code>x</code> and <code>y</code>) and returns their sum.</p>
+<p><strong>Diagram:</strong><br />
+<img alt="Picking up code to clone gcp_py_samples repo" src="../diagrams/plant_uml_exercise_hello_world_02.png" /></p>
+<p>The <strong>hello_world_02.py Workflow Summary</strong> ladder diagram above reviews how the files work together when you execute <code>pytest.ini</code> at runtime.<br />
+Refer back to this diagram after creating a similar file, <strong>hello_world_03.py</strong>, which introduces the GCP <code>@gcp_task</code> decorator and the <em>tasks</em> folder.</p>
+<h4 id="key-workflow-configuration-parameters">Key Workflow Configuration Parameters</h4>
+<p>Below is a list of the main parameters used in this exercise, which you will frequently use when designing your own workflows:</p>
+<ul>
+<li><code>Axis</code>: Represents an input node.</li>
+<li><code>Fn</code>: Represents a computation node that runs a Python function.</li>
+<li><code>function_path=add_two_numbers</code>: Directly references the local Python function.</li>
+<li><code>inputs={'x': 'input1', 'y': 'input2'}</code>: Binds input values to function arguments.</li>
+<li><code>output</code>: Holds the result of <code>add_two_numbers(x, y)</code>.</li>
+</ul>
+<p>Steps:</p>
+<ol>
+<li>Open <code>hello_world_01.py</code>, remove all code, add a comment summarizing the new function, and save the file as <code>hello_world_02.py</code>.</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-python"># GCP Workflow with function to add_two_numbers
+</code></pre>
+<ol>
+<li>Import the core GCP classes and utilities needed to define the workflow.</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-python">from gcp_kernel.api.task_definition import gcp_task
+from gcp_kernel.api.workflow_definition import Axis, Fn, Workflow, WorkflowConf, ExecutionPlatform
+</code></pre>
+<ol>
+<li>Define a local function that adds two numbers.</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-python"># This is the actual Python logic in your GCP workflow
+def add_two_numbers(x, y):
+    return x + y
+</code></pre>
+<blockquote>
+<p><strong>Hint:</strong> You can later move this functionality into a separate task file. We will cover this in the next section: <a href="#4-learn-how-to-utilize-gcp-tasks">Learn How to Utilize GCP Tasks</a>.</p>
+</blockquote>
+<ol>
+<li>Construct the <code>hello_world_02</code> workflow using the <code>Workflow</code> class.</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-python">hello_world = Workflow(
+    workflow_name=&quot;Hello World 02&quot;,
+    description=&quot;A workflow that sums its inputs&quot;,
+    configurations=WorkflowConf(platform=ExecutionPlatform.PURE_PYTHON, is_deployable=False),
+    graph={
+        'input1': Axis(data_type=int),
+        'input2': Axis(data_type=int),
+        'output': Fn(function_path=add_two_numbers, inputs={'x': 'input1', 'y': 'input2'})
+    }
+)
+</code></pre>
+<ol>
+<li>Save the file.<br />
+Then copy it into the <code>/src/workflows/</code> directory.</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-bash">cp hello_world_02.py /c/gcp_sandbox/modelproject01/gcp_py_samples/src/gcp_py_samples/workflows/hello_world_02.py
+</code></pre>
+<blockquote>
+<p><strong>Tip:</strong> If you do not save the file into the <em>workflows</em> directory, you will not be able to import it correctly in your tests.</p>
+</blockquote>
+<ol>
+<li>Prepare a new test file by copying and updating <code>test_hello_world_01.py</code>, and saving it as <code>test_hello_world_02.py</code>.</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-python"># test_hello_world_02 function to add_two_numbers, x=3, y=7
+# Save to:
+# /c/gcp_sandbox/modelproject01/gcp_py_samples/tests/integration/
+
+from gcp_kernel.api.execution import ExecRequests
+from gcp_py_samples.workflows.hello_world_02 import hello_world
+
+def test_addition_workflow(python_executor):
+    node = 'output'
+    coords = {'input1': 3, 'input2': 7}
+
+    exec_request = ExecRequests(
+        workflow_fqn=hello_world.fqn,
+        version=hello_world.version,
+        nodes_and_coords={node: coords}
+    )
+
+    results, _ = python_executor.execute_requests(exec_request)
+    assert results.get('output') == 10
+</code></pre>
+<ol>
+<li>Run the file you just saved and review the response.</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-python">/c/gcp_sandbox/modelproject01/gcp_py_samples/tests/integration&gt; pytest test_hello_world_02.py
+</code></pre>
+<h3 id="2-experiment-with-assert-for-better-test-scripting">2. Experiment with <code>assert</code> for Better Test Scripting</h3>
+<p>Testing, as you may have noticed from the output reports, is multi-layered and comprehensive.<br />
+You can take advantage of this by modifying test scripts to create multiple test cases that run each time you call a test file. Simply use a parameterized approach.</p>
+<blockquote>
+<p><strong>In a Nutshell:</strong> Copy everything after the import statements, paste it at the bottom of the file, give the function a unique name, and modify your values.<br />
+The example below shows how you can easily run two tests from a single file.</p>
+</blockquote>
+<p>Example:</p>
+<pre><code class="language-python"># File: ../gcp_py_samples/tests/integration/test_hello_world_02_two_asserts.py
+
+from gcp_kernel.api.execution import ExecRequests
+from gcp_py_samples.workflows.hello_world_02 import hello_world
+
+def test_addition_workflow(python_executor):
+    node = 'output'
+    coords = {'input1': 3, 'input2': 7}
+
+    exec_request = ExecRequests(
+        workflow_fqn=hello_world.fqn,
+        version=hello_world.version,
+        nodes_and_coords={node: coords}
+    )
+
+    results, _, _ = python_executor.execute_requests(exec_request)
+    assert results.get('output') == 10
+
+def test_addition_workflow02(python_executor):
+    node = 'output'
+    coords = {'input1': 4, 'input2': 8}
+
+    exec_request = ExecRequests(
+        workflow_fqn=hello_world.fqn,
+        version=hello_world.version,
+        nodes_and_coords={node: coords}
+    )
+
+    results, _, _ = python_executor.execute_requests(exec_request)
+    assert results.get('output') == 13
+</code></pre>
+<h3 id="3-concise-summary-of-first-two-workflows">3. Concise Summary of First Two Workflows</h3>
+<p>This section provides a quick summary of the GCP elements involved in <code>say_hello()</code> and <code>add_two_numbers(x, y)</code>.<br />
+Since each exercise included some setup tasks that you only need to do once, this serves as a starting point for quick reviews — focusing purely on GCP elements and key Python concepts such as decorators.</p>
+<h4 id="in-say_hello-you-ran-a-basic-workflow-with-two-files">In <code>say_hello()</code>, you ran a basic workflow with two files:</h4>
+<ul>
+<li><code>hello_world_01.py</code> defined a function (<code>say_hello(name)</code>)</li>
+<li><code>test_hello_world_01.py</code> tested this function</li>
+</ul>
+<p>The test simulated a greeting output and validated the result:</p>
+<ul>
+<li>☑ If the result matches expectations → the test passes</li>
+<li>✗ If it does not match → the test fails</li>
+</ul>
+<h4 id="in-add_two_numbersx-y-you-built-a-gcp-workflow-that-adds-two-numbers">In <code>add_two_numbers(x, y)</code>, you built a GCP workflow that adds two numbers:</h4>
+<ul>
+<li><code>hello_world_02.py</code> defined the workflow inline, using:</li>
+<li><code>Axis</code> for input nodes</li>
+<li><code>Fn</code> for the function node</li>
+<li>
+<p>The <code>add_two_numbers(x: int, y: int)</code> function, written directly in the file</p>
+</li>
+<li>
+<p><code>test_hello_world_02.py</code> submitted an execution request with inputs and asserted the result</p>
+</li>
+</ul>
+<p>In the test output (echo):</p>
+<ul>
+<li>☑ If the sum matches → the test passes</li>
+<li>✗ If the result is incorrect or the type hint is missing → the test fails</li>
+</ul>
+<h3 id="4-learn-how-to-utilize-gcp-tasks">4. Learn How to Utilize GCP Tasks</h3>
+<p>The objective of this section is to offload core business logic to a third file, stored in the<br />
+<code>../gcp_py_samples/src/gcp_py_samples/tasks/</code> folder.<br />
+You will then access the function from workflows using the <code>@gcp_task</code> decorator.</p>
+<ol>
+<li>Copy <code>hello_world_02.py</code> to a new file</li>
+</ol>
+<p>Create a copy of the script that added two numbers into the <code>workflows</code> folder.</p>
+<p>Example:</p>
+<pre><code class="language-bash">cp hello_world_02.py /c/gcp_sandbox/modelproject01/gcp_py_samples/src/gcp_py_samples/workflows/hello_world_03.py
+</code></pre>
+<ol>
+<li>Remove the function that will be placed into a new file</li>
+</ol>
+<p>Delete or comment out the function, as well as the import code that is no longer needed.<br />
+In the next step, this logic will be moved to a separate Python file.</p>
+<p>Example:</p>
+<pre><code class="language-python"># GCP Workflow with function to add_two_numbers
+
+# Commented out import (1 line):
+# from gcp_kernel.api.task_definition import gcp_task
+
+from gcp_kernel.api.workflow_definition import Axis, Fn, Workflow, WorkflowConf, ExecutionPlatform
+
+# ...
+
+# Commented out core logic (3 lines):
+# @gcp_task
+# def add_two_numbers(x: int, y: int) -&gt; int:
+#     return x + y
+
+hello_world = Workflow(
+    # ...
+)
+</code></pre>
+<ol>
+<li>Create the task file</li>
+</ol>
+<p>Move the removed function into a new file called <code>add_two_numbers_03.py</code>, and save it in the <code>tasks</code> folder:</p>
+<pre><code class="language-python">/c/gcp_sandbox/modelproject01/gcp_py_samples/src/gcp_py_samples/tasks/
+</code></pre>
+<p>Contents of the new task file:</p>
+<pre><code class="language-python">from gcp_kernel.api.task_definition import gcp_task
+
+@gcp_task
+def add_two_numbers(x: int, y: int) -&gt; int:
+    &quot;&quot;&quot;Task that returns a sum of its inputs&quot;&quot;&quot;
+    return x + y
+</code></pre>
+<ol>
+<li>Import the task into your workflow</li>
+</ol>
+<p>In the import section of <code>hello_world_03.py</code>, add your new task import.</p>
+<p>Example:</p>
+<pre><code class="language-python"># Necessary import when moving the function to the tasks folder
+
+from gcp_py_samples.tasks.add_two_numbers_03 import add_two_numbers
+</code></pre>
+<p>You can now access your stand-alone task from any workflow.</p>
+<ol>
+<li>Create a new test file (optional)</li>
+</ol>
+<p>Although you could reuse <code>test_hello_world_02.py</code>, it is good practice to create a discrete test file.</p>
+<p>Example:</p>
+<pre><code class="language-python">cp test_hello_world_02.py /c/gcp_sandbox/modelproject01/gcp_py_samples/src/gcp_py_samples/tests/test_hello_world_03.py
+</code></pre>
+<ol>
+<li>Run the test</li>
+</ol>
+<p>Modify the new or existing test script as needed and run it.</p>
+<p>Example:</p>
+<pre><code class="language-python">pytest test_hello_world_03.py
+</code></pre>
+<h3 id="5-summary-workflows-and-tasks">5. Summary: Workflows and Tasks</h3>
+<p>In the previous section, your objective was to separate a GCP workflow from the task of adding two input values (<code>x</code> and <code>y</code>).<br />
+Three <code>.py</code> files are involved, summarized in the ladder diagram below:</p>
+<p><strong>Diagram:</strong><br />
+<img alt="link" src="../diagrams/plant_uml_exercise_hello_world_03.png" /></p>
+<p><strong>The hello_world_03.py Workflow Summary diagram</strong> reviews how <code>pytest.ini</code> and the three files work together when you execute the test at runtime.<br />
+The GCP decorator <code>@gcp_task</code> is the most important element in this structure.<br />
+Remember also to save your task in the correct <em>tasks</em> folder.</p>
+<p>Now that you have completed an overview of workflows and tasks, explore and browse the sample files available in these directories to experiment further:</p>
+<ul>
+<li><code>C:/dev/gcp_py_samples/src/gcp_py_samples/workflows/</code></li>
+<li><code>C:/dev/gcp_py_samples/src/gcp_py_samples/tasks/</code></li>
+</ul>
+<p><br></p>
+<h1 id="gcp-workflow-components">GCP Workflow Components</h1>
+<p>This section details the main workflow components, configuration parameters, and principles.<br />
+It defines how workflows are constructed, how nodes operate, and provides examples for each node type.</p>
+<h2 id="workflow">Workflow</h2>
+<p>A <code>Workflow</code> orchestrates a series of interconnected nodes — inputs, computations, and functions — into a graph structure.<br />
+It defines the sequence and relationships between tasks that run within GCP.</p>
+<p>Example:</p>
+<pre><code class="language-python"># Created in Python using:
+from gcp_kernel.api.workflow_definition import Workflow
+</code></pre>
+<blockquote>
+<p><strong>Additional Information:</strong><br />
+A GCP <code>Workflow</code> is conceptually similar to a DAG (Directed Acyclic Graph) in frameworks such as Airflow, Prefect, or Luigi.</p>
+</blockquote>
+<h2 id="node">Node</h2>
+<p>A <code>node</code> represents an individual component inside a workflow.<br />
+Each node can be a data input, a computation, a constant, a function call, or other operation.</p>
+<p>Current GCP node types:</p>
+<ul>
+<li><a href="#axis">Axis</a></li>
+<li><a href="#const">Const</a></li>
+<li><a href="#fn">Fn</a></li>
+<li><a href="#switch">Switch</a></li>
+<li><a href="#ref">Ref</a></li>
+<li><a href="#userinput">UserInput</a></li>
+<li><a href="#sql">SQL</a></li>
+<li><a href="#extsql">ExtSQL</a></li>
+<li><a href="#aggzip">AggZip</a></li>
+</ul>
+<p>Each type is described below.</p>
+<h3 id="axis">Axis</h3>
+<p>An <code>Axis</code> represents a tunable or input value passed at runtime.<br />
+It accepts values either from the user or from other nodes.</p>
+<p>Example:</p>
+<pre><code class="language-python">'name': Axis(str)
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong><br />
+<code>Axis</code> behaves like a function parameter or loop variable in Python.</p>
+</blockquote>
+<h3 id="const">Const</h3>
+<p>A <code>Const</code> node holds a static value defined directly in the graph.<br />
+It is used for constants that do not require dynamic input.</p>
+<p>Example:</p>
+<pre><code class="language-python">'const': Const(List[int], [1, 2, 3])
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong><br />
+Python does not enforce constant variables; values are reassigned freely.</p>
+</blockquote>
+<h3 id="fn">Fn</h3>
+<p>An <code>Fn</code> node executes a Python function decorated with <code>@gcp_task</code> or <code>@gcp_spark_task</code>.<br />
+It maps inputs from other nodes to the function’s parameters.</p>
+<p>Example:</p>
+<pre><code class="language-python">'message': Fn(say_hello, {'user_name': 'name'})
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong><br />
+<code>Fn</code> is equivalent to decorated function calls in Python frameworks.</p>
+</blockquote>
+<h3 id="switch">Switch</h3>
+<p>A <code>Switch</code> node implements conditional branching, similar to Python’s <code>if-elif-else</code> or <code>match-case</code> logic.</p>
+<p>Example:</p>
+<pre><code class="language-python">&quot;result&quot;: Switch(&quot;x&quot;, {1: &quot;frac#denominator&quot;, 2: &quot;frac#numerator&quot;}, &quot;frac#numerator&quot;)
+</code></pre>
+<h3 id="ref">Ref</h3>
+<p>A <code>Ref</code> node references another node’s output or a workflow’s result.<br />
+It allows reuse of values computed elsewhere.</p>
+<p>Example:</p>
+<pre><code class="language-python">&quot;prediction&quot;: Ref('gcp_py_samples.workflows.demo2b.calbr_wf/model_output',
+                  {'portfolio_name': 'portfolio_name', 'as_of': 'as_of'})
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong><br />
+In Python, references are usually implicit through variable assignment.</p>
+</blockquote>
+<h3 id="userinput">UserInput</h3>
+<p>A <code>UserInput</code> node explicitly requires manual input at runtime before dependent nodes can execute.</p>
+<p>Example:</p>
+<pre><code class="language-python">python_executor.add_user_input_value(...)
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong><br />
+This is conceptually similar to using <code>input()</code> in Python.</p>
+</blockquote>
+<h3 id="sql">SQL</h3>
+<p>An <code>SQL</code> node executes a database query inside the GCP environment against a predefined source.</p>
+<p>Example:</p>
+<pre><code class="language-python">def sql_user(table: PORTFOLIO_SDF) -&gt; int:
+    return table.shape[0]
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong><br />
+In Python, similar operations are performed with libraries like <code>sqlite3</code>, <code>pandas.read_sql</code>, or SQLAlchemy.</p>
+</blockquote>
+<h3 id="extsql">ExtSQL</h3>
+<p>An <code>ExtSQL</code> node executes queries against external (non-Spark, non-Hive) databases.</p>
+<p>Example:</p>
+<pre><code class="language-python">'sql_result': ExtSQL(
+    sql=sql_string,
+    sources=[&quot;CLIMATE&quot;, &quot;WHOLESALE&quot;],
+    output_type=PORTFOLIO_SDF,
+    query_parameters={&quot;run_id&quot;: &quot;run_id&quot;}
+)
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong><br />
+Python equivalents include external connectors such as <code>psycopg2</code> or <code>pyodbc</code>.</p>
+</blockquote>
+<h3 id="aggzip">AggZip</h3>
+<p><code>Agg</code> nodes perform aggregation over multiple node outputs.<br />
+<code>Zip</code> nodes combine coordinate values element-wise across nodes.</p>
+<p>Aggregation Example:</p>
+<pre><code class="language-python">'ag': Agg('fn', {'a': 'const'})
+</code></pre>
+<p>Zip Example:</p>
+<pre><code class="language-python">'zip_nd': Zip(invoked_node='fn_nd2', sourced_axis_entries={'axis_int': 'cnst_nd2', 'axis_str': 'cnst_nd'})
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong><br />
+Python uses functions like <code>zip()</code>, <code>sum()</code>, and <code>reduce()</code> for similar purposes.</p>
+</blockquote>
+<h2 id="summary-gcp-nodes-compared-to-python">Summary: GCP Nodes Compared to Python</h2>
+<table>
+<thead>
+<tr>
+<th>GCP Concept</th>
+<th>Used in GCP</th>
+<th>Native in Python</th>
+<th>Equivalent Concept in Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#workflow">Workflow</a></td>
+<td>☑︎</td>
+<td>✗</td>
+<td>DAGs, pipelines (Airflow, Prefect)</td>
+</tr>
+<tr>
+<td><a href="#node">Node</a></td>
+<td>☑︎</td>
+<td>☑︎</td>
+<td>Functions, variables</td>
+</tr>
+<tr>
+<td><a href="#axis">Axis</a></td>
+<td>☑︎</td>
+<td>☑︎</td>
+<td>Function parameters, input variables</td>
+</tr>
+<tr>
+<td><a href="#const">Const</a></td>
+<td>☑︎</td>
+<td>✗</td>
+<td>Regular variables</td>
+</tr>
+<tr>
+<td><a href="#fn">Fn</a></td>
+<td>☑︎</td>
+<td>☑︎ (decorators)</td>
+<td>Decorated functions</td>
+</tr>
+<tr>
+<td><a href="#switch">Switch</a></td>
+<td>☑︎</td>
+<td>☑︎</td>
+<td>if-elif-else, match-case</td>
+</tr>
+<tr>
+<td><a href="#ref">Ref</a></td>
+<td>☑︎</td>
+<td>☑︎ (implicit)</td>
+<td>Passing variables between functions</td>
+</tr>
+<tr>
+<td><a href="#userinput">UserInput</a></td>
+<td>☑︎</td>
+<td>☑︎ (different)</td>
+<td>input() calls</td>
+</tr>
+<tr>
+<td><a href="#sql">SQL</a></td>
+<td>☑︎</td>
+<td>☑︎ (via libraries)</td>
+<td>Raw SQL queries (sqlite3, pandas)</td>
+</tr>
+<tr>
+<td><a href="#extsql">ExtSQL</a></td>
+<td>☑︎</td>
+<td>☑︎ (via connectors)</td>
+<td>External DB connectors (psycopg2, pyodbc)</td>
+</tr>
+<tr>
+<td><a href="#aggzip">AggZip</a></td>
+<td>☑︎</td>
+<td>☑︎ (Zip only)</td>
+<td>zip(), sum(), reduce(), Pandas groupby().agg()</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h1 id="running-in-a-lane">Running in a Lane</h1>
+<ul>
+<li>Overview of GCP SDLC process</li>
+<li>How to push workflows to a lane and execute from the UI</li>
+<li>Recommended starting point:<br />
+<a href="https://horizon.bankofoz.com/docs/display/GCP/Set-Up+SSH+Keys+for+new+GCP+Servers">Set Up SSH Keys for New GCP Servers</a></li>
+</ul>
+<h3 id="system-tasks">System Tasks</h3>
+<ul>
+<li>Documentation for system tasks</li>
+<li>Writing unit tests and using the GCP internal test harness</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong><br />
+<code>"=="</code> in comments is intentional — it is used for extended command testing across interpreters.</p>
+</blockquote>
+<p><br></p>
+<h1 id="other-gcp-concepts">Other GCP Concepts</h1>
+<h3 id="gcp-retrieves-and-persists-data-automatically">GCP Retrieves and Persists Data Automatically</h3>
+<ul>
+<li>All data is indexed by axes.</li>
+<li>Axes are attached to outputs and stored persistently.</li>
+<li>(Additional details forthcoming.)</li>
+</ul>
+<h3 id="best-practices">Best Practices</h3>
+<ul>
+<li>Configure result persistence early in development.</li>
+<li>Design modular workflows to support "what-if" analysis scenarios.</li>
+<li>(Additional best practices forthcoming.)</li>
+</ul>
+<p><br></p>
+<h1 id="document-approval-and-acceptance-history">Document Approval and Acceptance History</h1>
+<table>
+<thead>
+<tr>
+<th>Doc Version</th>
+<th>Go Live Date</th>
+<th>Approved by</th>
+<th>Notes and Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v.0.0.1</td>
+<td>2025-03-01</td>
+<td>Adil Imam</td>
+<td>Initial draft, will later split into subdocuments</td>
+</tr>
+<tr>
+<td>v.1.0.0</td>
+<td>2025-04-14</td>
+<td>Adil Imam</td>
+<td>Major revisions by Adriano Sverko, milestone release</td>
+</tr>
+<tr>
+<td>v.1.1.0</td>
+<td><em>tk</em></td>
+<td><em>tk</em></td>
+<td><em>tk</em></td>
+</tr>
+<tr>
+<td>v.2.0.0</td>
+<td><em>tk</em></td>
+<td><em>tk</em></td>
+<td><em>tk</em></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
