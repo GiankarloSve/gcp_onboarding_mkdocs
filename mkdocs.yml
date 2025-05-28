@@ -1,0 +1,7 @@
+site_name: Risk Analysis Modeler  # change to whatever title you want
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Risk Analysis Modeler: onboarding_new_gcp_users.md
